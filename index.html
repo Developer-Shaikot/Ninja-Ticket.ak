@@ -63,18 +63,18 @@
                 <div class="input-group f-class">
                 <div>
                     <label for="" id="class-total">First Class ($150)</label>
-                    <input id="class-count" class="inp-style inp-width" type="number" name="">
+                    <input id="class-count" class="inp-style inp-width" type="number" name="1">
                 </div>
                 <div class="plus-minus-btn">
-                    <p><span onclick="handleSitChange('class', true)">+</span>
+                     <p><span onclick="handleSitChange('class', true)" >+</span> 
                     <span onclick="handleSitChange('class', false)">-</span>
                     </p>
                 </div>
             </div>
                 <div class="input-group f-class">
                     <div>
-                        <label for="" id="economy-total">Economy ($100)</label>
-                        <input id="economy-count" class="inp-style inp-width" type="number" name="">
+                        <label id="economy-total" >Economy ($100)</label>
+                        <input id="economy-count" class="inp-style inp-width" type="number" name="1">
                     </div>
                     <div class="plus-minus-btn">
                         <p> <span onclick="handleSitChange('economy', true)">+</span> <span onclick="handleSitChange('economy', false)">-</span> </p>
@@ -122,7 +122,7 @@
                 if(isIncrease == false && sitCount > 0){
                     sitNewCount = sitCount - 1;
                 }
-                document.getElementById(sit + '-count').value = sitNewCount;
+                document.getElementById(sit + '-count').name = sitNewCount;
                 let sitTotal = 0;
                 if(sit == 'class'){
                     sitTotal = sitNewCount * 150;
@@ -150,7 +150,7 @@
                 
                 function getInputValue(sit) {
                     const sitInput = document.getElementById(sit + '-count');
-                    const sitCount = parseInt(sitInput.value);
+                    const sitCount = parseInt(sitInput.name);
                     return sitCount;
                 }
         </script>
