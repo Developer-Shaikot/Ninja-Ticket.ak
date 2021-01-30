@@ -33,7 +33,7 @@
         </div>
 
 
-        <div class="booking-form">
+        <div id="booking-area"  class="booking-form ">
             <h3>Explore By Bus</h3>
 
             <div class="inputs">
@@ -107,8 +107,14 @@
                         <p id="grand-total">$275</p>
                     </div>
                 </div>
-            </div>
-            <button class="btn-style">Book Now</button>
+            </div >
+            
+            <button id="booking" class="btn-style">Book Now</button>
+            
+        </div>
+        <div id="confirmation-area">
+             <h1>Thank's for booking.</h1>
+             <h2>Please wait for the <br> confirmation mail.</h2>
         </div>
         <script>
             function handleSitChange(sit, isIncrease){
@@ -151,6 +157,14 @@
                     const sitCount = parseInt(sitInput.value);
                     return sitCount;
                 }
+
+                const bookingBtn = document.getElementById("booking");
+                bookingBtn.addEventListener("click", function(){
+                    const bookingArea = document.getElementById("booking-area");
+                bookingArea.style.display = "none";
+                const confirmationArea = document.getElementById("confirmation-area");
+                confirmationArea.style.display = "block";
+                })
         </script>
     </main>
 

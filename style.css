@@ -102,8 +102,11 @@ nav ul li a:hover, a.active{
     min-width: 100px;
 }
 .btn-default{
+    margin: 2px;
+    padding: 2px;
     background-color: cyan;
     border: navajowhite;
+    border-radius: 2px;
     
 /* .plus-minus-btn{
     color: #3352F2;
@@ -125,4 +128,10 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+#confirmation-area{
+    display: none;
+    text-align: center;
+    background-color: cyan;
+    border-radius: 5px;
 }
