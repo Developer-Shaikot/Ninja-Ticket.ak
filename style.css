@@ -132,6 +132,7 @@ nav ul li a:hover, a.active{
 #confirmation-area{
     margin-top: 3px;
     display: none;
+    font-size: small;
     text-align: center;
     margin: 2px;
     padding: 3px;
