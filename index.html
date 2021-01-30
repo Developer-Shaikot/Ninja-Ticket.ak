@@ -3,12 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta value="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Ticket</title>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -41,43 +39,43 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">From</label>
-                    <input class="inp-style" type="text" name="" placeholder="Dhaka">
+                    <input class="inp-style" type="text" value="" placeholder="Dhaka">
                 </div>
                 <div class="input-group">
                     <label" for="">From</label>
-                    <input class="inp-style" type="text" name="" placeholder="Chittagone">
+                    <input class="inp-style" type="text" value="" placeholder="Chittagone">
                 </div>
             </div>
 
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="inp-style" type="date" value="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="inp-style" type="date" value="">
                 </div>
             </div>
             <div class="inputs">
                 <div class="input-group f-class">
                 <div>
                     <label for="" id="class-total">First Class ($150)</label>
-                    <input id="class-count" class="inp-style inp-width" type="number" name="1">
+                    <input id="class-count" type="text" class="form-control text-center" value="1">
                 </div>
                 <div class="plus-minus-btn">
-                     <p><span onclick="handleSitChange('class', true)" >+</span> 
-                    <span onclick="handleSitChange('class', false)">-</span>
-                    </p>
+                    <button onclick="handleSitChange('class', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                    <button onclick="handleSitChange('class', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
                 </div>
             </div>
                 <div class="input-group f-class">
                     <div>
                         <label id="economy-total" >Economy ($100)</label>
-                        <input id="economy-count" class="inp-style inp-width" type="number" name="1">
+                        <input id="economy-count" type="text" class="form-control text-center" value="1">
                     </div>
                     <div class="plus-minus-btn">
-                        <p> <span onclick="handleSitChange('economy', true)">+</span> <span onclick="handleSitChange('economy', false)">-</span> </p>
+                        <button onclick="handleSitChange('economy', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="handleSitChange('economy', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
                     </div>
                 </div>
 
@@ -88,7 +86,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id="total-price">$500</p>
+                        <p id="total-price">$250</p>
                     </div>
                 </div>
 
@@ -97,7 +95,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p id="charge-amount">$50</p>
+                        <p id="charge-amount">$25</p>
                     </div>
                 </div>
                 <hr>
@@ -106,7 +104,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p id="grand-total">$550</p>
+                        <p id="grand-total">$275</p>
                     </div>
                 </div>
             </div>
@@ -122,15 +120,15 @@
                 if(isIncrease == false && sitCount > 0){
                     sitNewCount = sitCount - 1;
                 }
-                document.getElementById(sit + '-count').name = sitNewCount;
+                document.getElementById(sit + '-count').value = sitNewCount;
                 let sitTotal = 0;
                 if(sit == 'class'){
-                    sitTotal = sitNewCount * 150;
+                    totalPrice = sitNewCount * 150;
                 }
                 if(sit == 'economy'){
-                    sitTotal = sitNewCount * 100;
+                    totalPrice = sitNewCount * 100;
                 }
-                document.getElementById(sit + '-total').innerText ='$' + sitTotal;
+                document.getElementById(sit + '-total').value ='$' + totalPrice;
                 calculateTotal();
                 }
 
@@ -150,7 +148,7 @@
                 
                 function getInputValue(sit) {
                     const sitInput = document.getElementById(sit + '-count');
-                    const sitCount = parseInt(sitInput.name);
+                    const sitCount = parseInt(sitInput.value);
                     return sitCount;
                 }
         </script>
