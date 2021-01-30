@@ -130,8 +130,11 @@ nav ul li a:hover, a.active{
     justify-content: space-between;
 }
 #confirmation-area{
+    margin-top: 3px;
     display: none;
     text-align: center;
-    background-color: cyan;
-    border-radius: 5px;
+    margin: 2px;
+    padding: 3px;
+    background-color: rgb(109, 172, 153);
+    border-radius: 10px;
 }

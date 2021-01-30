@@ -114,7 +114,10 @@
         </div>
         <div id="confirmation-area">
              <h1>Thank's for booking.</h1>
-             <h2>Please wait for the <br> confirmation mail.</h2>
+             <h2>Please wait for the <br> confirmation mail. 
+            <br>You can also cancel your booking <br> by sending us reply to "NO"<br>
+             on our confirmation mail.
+            <br>Thank's Again.</h2>
         </div>
         <script>
             function handleSitChange(sit, isIncrease){
@@ -123,7 +126,7 @@
                 if(isIncrease == true) {
                     sitNewCount = sitCount + 1;
                 }
-                if(isIncrease == false && sitCount > 0){
+                if(isIncrease == false && sitCount > 1){
                     sitNewCount = sitCount - 1;
                 }
                 document.getElementById(sit + '-count').value = sitNewCount;
